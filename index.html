@@ -1,0 +1,75 @@
+  <!DOCTYPE html>
+  <html lang="nl">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO Website</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header>
+      <h1>TODO Website</h1>
+      <label for="sort" class="sortLabel">Sort / filter by:</label>
+      <select id="sort" class="sortSelect">
+        <option id="dateSort" class="dateSort" value="dateSort" >Date</option>
+        <option id="importanceSort" class="importanceSort" value="importanceSort">Important</option>
+        <option id="alphabeticalSort" class="alphabeticalSort" value="alphabeticalSort">Alphabetical</option>
+      </select>
+      <div style="height: 10px;"></div>
+    </header>
+
+    <br>
+
+    <div class="addButtons">
+      <button class="addTask" id="addTask">Add new task</button>
+      <button class="addList" id="addList">Add new list</button>
+    </div>
+
+
+    <br>
+
+    <div id="main-container" class="main-container">
+
+      <div class="createDiv" id="createTaskDiv">
+        <h2>Create new task</h2>
+        <input type="text" id="taskName" placeholder="Name">
+        <input type="text" id="description" placeholder="Description">
+        <input type="date" id="date" placeholder="Date">
+        <input type="time" id="time" placeholder="Time">
+        <br>
+        <div class="date">
+          <p>Date Required?</p>
+          <input type="checkbox" id="dateRequired">
+        </div>
+        <div class="time">
+          <p>Time Required?</p>
+          <input type="checkbox" id="timeRequired">
+        </div>
+        <div style="height: 10px;"></div>
+        <input type="button" id="submit" value="Add Task">
+      </div>
+
+      <br>
+
+      <div class="createDiv" id="createListDiv">
+        <h2>Create new list</h2>
+        <input type="text" id="listName" placeholder="Name">
+        <br>
+        <input type="button" id="submitList">
+      </div>
+
+    </div>
+
+    <div class="alertDiv" id="alertDiv" style="display: inline;">
+      <p style="display: inline; padding-right: 10%;" id="alertText">Please fill in all fields</p>
+      <button class="deleteAlert" id="deleteAlert">X</button>
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
+
+  </html>
