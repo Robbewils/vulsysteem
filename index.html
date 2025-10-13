@@ -1,77 +1,101 @@
-  <!DOCTYPE html>
-  <html lang="nl">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vulsysteem</title>
+  <style>
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TODO Website</title>
-    <link href="style.css" rel="stylesheet">
-  </head>
+    header {
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      background-color: rgb(225, 225, 225);
+    }
 
-  <body>
+    header button {
+      background: none;
+      border: none;
+      font-size: large;
+    }
+
+    #sidebar {
+      position: fixed;
+      top: 0;
+      left: -200px;
+      width: 200px;
+      height: 100%;
+      transition: all 0.3s ease;
+      background-color: rgb(205, 205, 205);
+    }
+
+    #sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #sidebar li {
+      padding: 15px 20px;
+    }
+
+    #sidebar a {
+      color: black;
+      font-size: large;
+      text-decoration: none;
+    }
+
+    #sidebar.active {
+      left: 0;
+    }
+
+    main {
+      padding: 1rem;
+      transition: margin-left 0.3s ease;
+    }
+
+    main.shifted {
+      margin-left: 200px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <main>
 
     <header>
-      <h1>TODO Website</h1>
-      <label for="sort" class="sortLabel">Sort / filter by:</label>
-      <select id="sort" class="sortSelect">
-        <option id="dateSort" class="dateSort" value="dateSort" >Date</option>
-        <option id="importanceSort" class="importanceSort" value="importanceSort">Important</option>
-        <option id="alphabeticalSort" class="alphabeticalSort" value="alphabeticalSort">Alphabetical</option>
-      </select>
-      <div style="height: 10px;"></div>
+      <button id="menuButton">☰ Menu</button>
     </header>
 
-    <br>
+    <nav id="sidebar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Over</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </nav>
 
-    <div class="addButtons">
-      <button class="addTask" id="addTask">Add new task</button>
-      <button class="addList" id="addList">Add new list</button>
-    </div>
+    <section>
+      
+    </section>
 
+    <footer>
 
-    <br>
+    </footer>
 
-    <div id="main-container" class="main-container">
+  </main>
 
-      <div class="createDiv" id="createTaskDiv">
-        <h2>Create new task</h2>
-        <input type="text" id="taskName" placeholder="Name">
-        <input type="text" id="description" placeholder="Description">
-        <input type="date" id="date" placeholder="Date">
-        <input type="time" id="time" placeholder="Time">
-        <br>
-        <div class="date">
-          <p>Date Required?</p>
-          <input type="checkbox" id="dateRequired">
-        </div>
-        <div class="time">
-          <p>Time Required?</p>
-          <input type="checkbox" id="timeRequired">
-        </div>
-        <div style="height: 10px;"></div>
-        <input type="button" id="submit" value="Add Task">
-      </div>
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const sidebar = document.getElementById('sidebar');
+    const main = document.querySelector('main');
 
-      <br>
+    menuButton.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+      main.classList.toggle('shifted');
+    });
 
-      <div class="createDiv" id="createListDiv">
-        <h2>Create new list</h2>
-        <input type="text" id="listName" placeholder="Name">
-        <br>
-        <input type="button" id="submitList">
-      </div>
-
-    </div>
-
-    <div class="alertDiv" id="alertDiv" style="display: inline;">
-      <p style="display: inline; padding-right: 10%;" id="alertText">Please fill in all fields</p>
-      <button class="deleteAlert" id="deleteAlert">X</button>
-    </div>
-
-    <script src="script.js"></script>
-
-  </body>
-
-  </html>
-
-
+  </script>
+</body>
+</html>
