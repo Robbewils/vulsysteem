@@ -21,10 +21,16 @@
         <li><a href="contact.html">Contact</a></li>
         <li><a href="help.html">Help</a></li>
       </ul>
+      <label for="taalSelect">Taal:</label>
+      <select id="taalSelect">
+        <option value="nl">Nederlands</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+      </select>
     </nav>
 
     <section>
-      <h1>Project Vulsysteem Test XXXXXXX</h1>
+      <h1 id="title">Project Vulsysteem Test 11111111</h1>
       <hr>
     </section>
 
@@ -38,16 +44,7 @@
 
   </main>
 
-  <script>
-    const menuButton = document.getElementById('menuButton');
-    const sidebar = document.getElementById('sidebar');
-    const main = document.querySelector('main');
-
-    menuButton.addEventListener('click', () => {
-      sidebar.classList.toggle('active');
-      main.classList.toggle('shifted');
-    });
-
-  </script>
+  <script src="js/index.js"></script>
+  <script src="js/global.js"></script>
 </body>
 </html>
