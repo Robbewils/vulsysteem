@@ -6,46 +6,74 @@
   <title>Vulsysteem</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="page">
 
-  <main>
+  <main class="main">
 
-    <header>
-      <button id="menuButton">☰ Menu</button>
+    <header class="head">
+      <button id="menuButton" class="btn-menu">☰ Menu</button>
     </header>
 
-    <nav id="sidebar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">Over</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="help.html">Help</a></li>
+    <nav id="sidebar" class="side">
+      <ul class="side-list">
+        <li class="side-item">
+          <button id="nav_home" class="btn-side">Home</button>
+          <ul id="subnav_home" class="sublist">
+            <li class="subitem"><a href="index.html#title" class="sublink">Title</a></li>
+            <li class="subitem"><a href="index.html#content" class="sublink">Content</a></li>
+            <li class="subitem"><a href="index.html#footer" class="sublink">Footer</a></li>
+          </ul>
+        </li>
+        <li class="side-item"><button id="nav_about" class="btn-side">Over</button>
+          <ul id="subnav_about" class="sublist">
+            <li class="subitem"><a href="about.html#title" class="sublink">Title</a></li>
+            <li class="subitem"><a href="about.html#content" class="sublink">Content</a></li>
+            <li class="subitem"><a href="about.html#footer" class="sublink">Footer</a></li>
+          </ul>
+        </li>
+        <li class="side-item"><button id="nav_contact" class="btn-side">Contact</button>
+          <ul id="subnav_contact" class="sublist">
+            <li class="subitem"><a href="contact.html#title" class="sublink">Title</a></li>
+            <li class="subitem"><a href="contact.html#content" class="sublink">Content</a></li>
+            <li class="subitem"><a href="contact.html#footer" class="sublink">Footer</a></li>
+          </ul>
+        </li>
+        <li class="side-item"><button id="nav_help" class="btn-side">Help</button>
+          <ul id="subnav_help" class="sublist">
+            <li class="subitem"><a href="help.html#title" class="sublink">Title</a></li>
+            <li class="subitem"><a href="help.html#content" class="sublink">Content</a></li>
+            <li class="subitem"><a href="help.html#footer" class="sublink">Footer</a></li>
+          </ul>
       </ul>
-      <label for="taalSelect">Taal:</label>
-      <select id="taalSelect">
-        <option value="nl">Nederlands</option>
-        <option value="en">English</option>
-        <option value="fr">Français</option>
-      </select>
+
+      <div class="lang-box">
+        <label for="taalSelect" class="lang-label">Taal:</label>
+        <select id="taalSelect" class="lang-select">
+          <option value="nl">Nederlands</option>
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
     </nav>
 
-    <section>
-      <h1>Kom in contact</h1>
-      <hr>
+    <section class="mainSec">
+      <h1 id="title" class="title">Project Vulsysteem Test 11111111</h1>
+      <hr class="line">
     </section>
 
-    <section>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem soluta illo earum fugit quaerat veritatis, iure quo delectus, quod ab officia quas provident rem, dicta illum maxime perspiciatis esse omnis.</p>
+    <section class="mainSec">
+      <p class="text">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta deleniti rem, officiis aperiam repellat dolore maxime molestiae velit, delectus dolorum quod nobis, quibusdam sit? Asperiores fugiat nam perferendis atque cupiditate.
+      </p>
     </section>
 
-    <footer>
-      <p>&copy; 2025</p>
+    <footer id="footer" class="foot">
+      <p class="foot-text">&copy; 2025</p>
     </footer>
 
   </main>
 
   <script src="js/index.js"></script>
   <script src="js/global.js"></script>
-
 </body>
 </html>
