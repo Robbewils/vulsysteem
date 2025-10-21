@@ -254,7 +254,18 @@
 }
 
 .sketchfab-embed-wrapper1 iframe {
-  width: 60rem;
-  height: 60rem;
+  width: 40rem;
+  height: 40rem;
+  border-radius: 12px;
+}
+
+.sketchfab-embed-wrapper2 iframe {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 12px;
+}
+
+img, .img1 {
+  height: 40rem;
   border-radius: 12px;
 }

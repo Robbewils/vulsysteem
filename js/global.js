@@ -31,7 +31,7 @@ navHome.textContent = localStorage.getItem('taal') === 'nl' ? 'Ga naar' : 'Go to
 navAbout.textContent = localStorage.getItem('taal') === 'nl' ? 'Over ons' : 'About us';
 navContact.textContent = localStorage.getItem('taal') === 'nl' ? 'Contact' : 'Contact';
 navHelp.textContent = localStorage.getItem('taal') === 'nl' ? 'Help' : 'Help';
-subnav_home_item1.textContent = localStorage.getItem('taal') === 'nl' ? 'Thuis' : 'Home';
+subnav_home_item1.textContent = localStorage.getItem('taal') === 'nl' ? 'Ons project' : 'Our project';
 subnav_home_item2.textContent = localStorage.getItem('taal') === 'nl' ? 'Over ons' : 'About us';
 subnav_home_item3.textContent = 'contact';
 subnav_home_item4.textContent = 'Help';
