@@ -2,11 +2,13 @@
 .page {
   margin: 0;
   font-family: "Orbitron", "Segoe UI", sans-serif;
-  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  background: #1a1a1a;
   color: #e0e0ff;
-  text-shadow: 0 0 3px rgba(150, 150, 255, 0.3);
-  transition: background 0.3s ease;
+  text-shadow: 0 0 3px rgba(150, 150, 255, 0.3);;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* === HEADER === */
@@ -185,11 +187,15 @@
 
 .mainSec {
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /* === TITELS EN LIJNEN === */
 .title {
-  font-size: 2rem;
+  font-size: 4rem;
   color: #b3b3ff;
 }
 
@@ -207,7 +213,8 @@
   line-height: 1.6;
   text-shadow: 0 0 2px rgba(0, 255, 255, 0.3), 0 0 4px rgba(255, 0, 255, 0.2);
   transition: color 0.3s ease, text-shadow 0.3s ease;
-  font-size: 1rem;
+  font-size: 2rem;
+  width: 70rem;
 }
 
 /* === FOOTER === */
@@ -244,4 +251,10 @@
 .foot a:hover {
   color: #ff00ff;
   text-shadow: 0 0 8px #ff00ff, 0 0 15px #00ffff;
+}
+
+.sketchfab-embed-wrapper1 iframe {
+  width: 60rem;
+  height: 60rem;
+  border-radius: 12px;
 }
