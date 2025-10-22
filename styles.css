@@ -184,7 +184,18 @@
 }
 
 /* === TITELS EN LIJNEN === */
-.title { font-size: clamp(1.6rem, 6vw, 4rem); color: var(--muted); margin: 1rem 0 0.5rem 0; }
+.title {
+  font-size: clamp(1.6rem, 6vw, 4rem);
+  color: var(--muted);
+  margin: 1rem 0 0.5rem 0;
+}
+
+.subtitle {
+  font-size: clamp(1.4rem, 5vw, 3rem);
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
 .line {
   border: none;
   height: 2px;
@@ -204,6 +215,7 @@
   margin: 0;
   padding: 0.25rem;
   box-sizing: border-box;
+  text-align: center;
 }
 
 /* === FOOTER === */
