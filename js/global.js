@@ -29,6 +29,8 @@ const subnav_about_item3 = document.getElementById('subnav_about_item3');
 
 const subnav_help_item1 = document.getElementById('subnav_help_item1');
 
+const taalSelectLabel = document.getElementById('taalSelectLabel');
+
 let taal = localStorage.getItem('taal');
 langSelect.value = taal;
 
@@ -50,6 +52,8 @@ subnav_about_item2.textContent = taal === 'nl' ? 'Onze doelstelling' : 'Our miss
 subnav_about_item3.textContent = taal === 'nl' ? 'Ons doel' : 'Our goal';
 
 subnav_help_item1.textContent = taal === 'nl' ? 'Stuur ons een mail' : 'Send us a mail';
+
+taalSelectLabel.textContent = taal === 'nl' ? 'Taal' : 'Language';
 
 navHome.addEventListener('click', () => {
   homeSubnav.classList.toggle('show');

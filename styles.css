@@ -1,7 +1,7 @@
-/* === RESPONSIVE STYLES.CSS (vervangt oude CSS) === */
+/* === RESPONSIVE STYLES.CSS (hergeschreven) === */
 
-/* Variabelen */
-:root{
+/* === VARIABELEN === */
+:root {
   --sidebar-width: clamp(220px, 70vw, 300px);
   --gutter: 1.5rem;
   --accent-a: #00ffff;
@@ -14,7 +14,7 @@
   --muted: #b3b3ff;
 }
 
-/* === PAGINA BASIS === */
+/* === BASIS PAGINA === */
 .page {
   margin: 0;
   font-family: "Orbitron", "Segoe UI", sans-serif;
@@ -37,8 +37,8 @@
   color: #d0d0ff;
   border-bottom: 2px solid var(--accent-a);
   box-shadow: 0 2px 10px rgba(0, 255, 255, 0.3);
-  z-index: 1500;
   position: relative;
+  z-index: 1500;
 }
 
 /* === MENU BUTTON === */
@@ -51,14 +51,13 @@
   text-shadow: 0 0 5px var(--accent-a);
   transition: color 0.3s ease, transform 0.2s ease, text-shadow 0.3s ease;
 }
-
 .btn-menu:hover {
   color: var(--accent-b);
   text-shadow: 0 0 10px var(--accent-b), 0 0 20px var(--accent-a);
   transform: scale(1.05);
 }
 
-/* === SIDEBAR (NAVBAR) === */
+/* === SIDEBAR === */
 .side {
   position: fixed;
   top: 0;
@@ -76,7 +75,6 @@
   scrollbar-color: #00ffff40 #0d0d0d;
   padding-bottom: 4rem;
 }
-
 .side.active { left: 0; }
 
 /* === SCROLLBAR === */
@@ -168,7 +166,7 @@
   margin-bottom: 2rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center; /* hele container centreren */
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
@@ -183,27 +181,6 @@
   box-sizing: border-box;
 }
 
-/* === TITELS EN LIJNEN === */
-.title {
-  font-size: clamp(1.6rem, 6vw, 4rem);
-  color: var(--muted);
-  margin: 1rem 0 0.5rem 0;
-}
-
-.subtitle {
-  font-size: clamp(1.4rem, 5vw, 3rem);
-  color: var(--muted);
-  margin-top: 0.25rem;
-}
-
-.line {
-  border: none;
-  height: 2px;
-  background: linear-gradient(to right, var(--accent-a), var(--accent-b));
-  box-shadow: 0 0 8px var(--accent-a), 0 0 12px var(--accent-b);
-  margin: 1rem 0;
-}
-
 /* === TEKST === */
 .text {
   color: var(--muted);
@@ -212,10 +189,31 @@
   transition: color 0.3s ease, text-shadow 0.3s ease;
   font-size: clamp(0.95rem, 2.2vw, 1.6rem);
   max-width: 70rem;
-  margin: 0;
+  margin: 0 auto; /* horizontaal centreren */
   padding: 0.25rem;
   box-sizing: border-box;
+  text-align: center; /* tekst zelf centreren */
+}
+
+/* === TITELS EN LIJNEN === */
+.title {
+  font-size: clamp(1.6rem, 6vw, 4rem);
+  color: var(--muted);
+  margin: 1rem 0 0.5rem 0;
   text-align: center;
+}
+.subtitle {
+  font-size: clamp(1.4rem, 5vw, 3rem);
+  color: var(--muted);
+  margin-top: 0.25rem;
+  text-align: center;
+}
+.line {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, var(--accent-a), var(--accent-b));
+  box-shadow: 0 0 8px var(--accent-a), 0 0 12px var(--accent-b);
+  margin: 1rem 0;
 }
 
 /* === FOOTER === */
@@ -232,11 +230,23 @@
   z-index: 1000;
   padding: 0.35rem 0;
 }
-.foot-text { margin: 0; color: var(--muted); text-shadow: 0 0 5px rgba(0, 255, 255, 0.3); font-size: 0.95rem; }
+.foot-text {
+  margin: 0;
+  color: var(--muted);
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+  font-size: 0.95rem;
+}
 
 /* === LINKS ALGEMEEN === */
-.sublink, .mainSec a, .foot a { color: var(--accent-a); text-decoration: underline; transition: color 0.3s ease, text-shadow 0.3s ease; }
-.sublink:hover, .mainSec a:hover, .foot a:hover { color: var(--accent-b); text-shadow: 0 0 8px var(--accent-b), 0 0 15px var(--accent-a); }
+.sublink, .mainSec a, .foot a {
+  color: var(--accent-a);
+  text-decoration: underline;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.sublink:hover, .mainSec a:hover, .foot a:hover {
+  color: var(--accent-b);
+  text-shadow: 0 0 8px var(--accent-b), 0 0 15px var(--accent-a);
+}
 
 /* === IFRAME & SKETCHFAB RESPONSIVE === */
 .sketchfab-embed-wrapper1,
@@ -258,7 +268,7 @@
   border-radius: 12px;
   border: none;
   display: block;
-  object-fit: contain; /* behoud originele verhouding */
+  object-fit: contain;
 }
 
 /* === IMAGE RESPONSIVE === */
@@ -277,10 +287,10 @@
   max-height: 70vh;
   border-radius: 12px;
   display: block;
-  object-fit: contain; /* voorkomt uitrekken */
+  object-fit: contain;
 }
 
-/* === Small helpers / accessibility === */
+/* === TOEGANKELIJKHEID === */
 button:focus, .sublink:focus, .btn-side:focus {
   outline: 2px dashed rgba(0,255,255,0.35);
   outline-offset: 3px;
@@ -310,5 +320,3 @@ button:focus, .sublink:focus, .btn-side:focus {
   .mainSec { gap: 0.6rem; }
 }
 @media (min-height: 700px) { .main { padding-bottom: calc(6.5rem + 1rem); } }
-
-/* End of responsive CSS */
